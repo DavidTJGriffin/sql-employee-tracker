@@ -12,13 +12,24 @@ create table roles (
     title varchar(30),
     salary decimal, 
     department_id int
+    FOREIGN KEY (department_id)
+    REFERENCES departments(id)
+    ON DELETE CASCADE
 );
 
 create table employees (
     id int auto_increment primary key,
     first_name varchar(30),
     last_name varchar(30),
-    role_id int
+    role_id int,
+    manager_id int,
+    FOREIGN KEY (role_id)
+    REFERENCES roles(id)
+    ON DELETE CASCADE,
+     FOREIGN KEY (manager_id)
+    REFERENCES employees(id)
+    ON DELETE SET NULL
+
 );
 
 
