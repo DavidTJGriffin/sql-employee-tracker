@@ -13,7 +13,7 @@ Use arrows keys to scroll through the various categories of "View All Employees"
 
 
 
-![Website Screenshot](assets/images/website-screenshot.jpg)
+![Website Screenshot](assets/images/employee-tracker-screenshot.png)
 ## Credits
 [David Griffin](https://github.com/DavidTJGriffin)
 ## License
