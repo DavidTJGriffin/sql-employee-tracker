@@ -20,7 +20,12 @@ function init() {
             } else {
                 console.log("Goodbye!!");
                 process.exit(0);
-
+            }
+            if(userResponse.options === "View All Roles") {
+                viewAllRoles();
+            } else {
+                console.log("Goodbye!!");
+                process.exit(0);
             }
         })
 }
