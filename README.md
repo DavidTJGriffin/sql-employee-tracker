@@ -1,14 +1,14 @@
 ## Description
-- I created this so that people could access a note taking application from any client by visiting a single link to have synced up notes. 
+- I created this so employers can have a command line application to keep track of various data from their workforce. 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 ## Installation
-Open the link: https://davidtjgriffin-note-taker.herokuapp.com/
+First, fork the repository to your local machine. Then install mysql and node.js. Open the application and open a new terminal in the root of the directory and type 'npm index' and press enter. 
 ## Usage
-Click "Get Started" to open the note taking application. Add a Note Title and Note Text and update notes as you wish!
+Use arrows keys to scroll through the various categories of "View All Employees", "Add Employee", "Update Employee Role", "View All Roles", "Add Role", "View All Departments", "Add Department", or "Quit". Then, press enter to perform the given action. 
 
 
 
@@ -42,10 +42,9 @@ SOFTWARE.
 ![MIT License](https://img.shields.io/apm/l/vim-mode)
 
 ## Features
-- Synced notes from any client
-- Add notes
-- Delete Notes
-- Edit Notes
+- Easy command line interface
+- Ability to add new data
+- Ability to view existing data
 ## How to Contribute
 1. Fork the project to your own machine
 2. Refactor code to be further optimized 
@@ -53,4 +52,4 @@ SOFTWARE.
 4. Push your work back up to your branch
 5. Submit a Pull request so that I can review your changes
 ## Tests
-- Add various notes and try different functionalities such as delete, add, and update. 
+- Enter the various categories and interact with the workforce database. 

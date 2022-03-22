@@ -11,7 +11,7 @@ create table roles (
     id int auto_increment primary key, 
     title varchar(30),
     salary decimal, 
-    department_id int
+    department_id int,
     FOREIGN KEY (department_id)
     REFERENCES departments(id)
     ON DELETE CASCADE

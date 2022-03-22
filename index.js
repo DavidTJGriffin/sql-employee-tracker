@@ -17,10 +17,7 @@ function init() {
             if (userResponse.options === "View All Departments") {
                 //create a view employees function 
                 viewAllDepartments(); 
-            } else {
-                console.log("Goodbye!!");
-                process.exit(0);
-            }
+            } 
             if(userResponse.options === "View All Roles") {
                 viewAllRoles();
             } else {
@@ -51,7 +48,7 @@ database.query(departmentQuery, function(err, results){
 
 function viewAllRoles(){
     console.log("Show values from database.."); 
-    const rolesQuery = "SELECT id, name AS 'Department Name' from departments "
+    const rolesQuery = "SELECT * from roles"
     database.query(rolesQuery, function(err, results){
         if (err) console.log(err); 
     
