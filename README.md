@@ -6,10 +6,14 @@
 - [Credits](#credits)
 - [License](#license)
 ## Installation
-First, fork the repository to your local machine. Then install mysql and node.js. Open the application and open a new terminal in the root of the directory and type 'npm index' and press enter. 
-## Usage
-Use arrows keys to scroll through the various categories of "View All Employees", "Add Employee", "Update Employee Role", "View All Roles", "Add Role", "View All Departments", "Add Department", or "Quit". Then, press enter to perform the given action. 
+First, fork the repository to your local machine. Install dependencies with `npm install`. If you want to run the app without Docker you must also install MySQL and create a `.env` file containing `DB_USER`, `DB_PASSWORD`, and `DB_NAME`.
 
+## Docker
+1. Install [Docker](https://docs.docker.com/get-docker/) on your machine.
+2. In the project root run `docker-compose up --build`.
+   This builds the Node.js image, starts MySQL 8, seeds the database using the SQL files in the `db/` folder and launches the CLI.
+3. When finished press `Ctrl+C` to stop the containers. To remove them run `docker-compose down`.
+Use arrows keys to scroll through the various categories of "View All Employees", "Add Employee", "Update Employee Role", "View All Roles", "Add Role", "View All Departments", "Add Department", or "Quit". Then, press enter to perform the given action. 
 
 
 
@@ -52,4 +56,9 @@ SOFTWARE.
 4. Push your work back up to your branch
 5. Submit a Pull request so that I can review your changes
 ## Tests
-- Enter the various categories and interact with the workforce database. 
+With Docker running you can verify the connection by executing:
+
+```
+docker-compose run --rm app npm run test:connection
+```
+This runs `testConnection.js` which prints the result of a simple query to confirm the CLI can reach the MySQL container.
