@@ -14,7 +14,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "node index"
+    "start": "node index",
+    "test:connection": "node testConnection.js"
   },
   "repository": {
     "type": "git",
