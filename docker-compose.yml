@@ -17,8 +17,9 @@ services:
       DB_PASSWORD: demo123
       DB_NAME: workforce
       DB_HOST: mysql
-    working_dir: /app
     depends_on:
       - mysql
     stdin_open: true
     tty: true
+
+    
